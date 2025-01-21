@@ -1,0 +1,56 @@
+---
+- name: Change content of a config file
+  hosts: localhost
+  tasks:
+    - name: Install httpd
+      ansible.builtin.dnf:
+        name: httpd
+        state: installed
+
+    - name: Start httpd
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name:  Create a custom document root for httpd
+      ansible.builtin.file:
+        path: /custom
+        state: directory
+        recurse: yes
+        owner: root
+        group: root
+        mode: 0755
+        setype: httpd_sys_content_t
+        seuser: system_u
+
+    - name: Modify document root in config file
+      ansible.builtin.lineinfile:
+        dest: /etc/httpd/conf/httpd.conf
+        regexp: ^DocumentRoot
+        line: DocumentRoot "/custom"
+      notify: restart_httpd
+
+    - name: Modify the directory block for the document root
+      ansible.builtin.lineinfile:
+        dest: /etc/httpd/conf/httpd.conf
+        regexp: '^<Directory "/var/www/html">'
+        line: <Directory "/custom">
+        backrefs: yes
+      notify: restart_httpd
+
+    - name: populate web content
+      ansible.builtin.copy:
+        content: "This is using a custom document root\n"
+        dest: /custom/index.html
+        owner: root
+        group: root
+        mode: 0644
+        setype: httpd_sys_content_t
+        seuser: system_u
+  
+  handlers:
+    - name: restart_httpd
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
