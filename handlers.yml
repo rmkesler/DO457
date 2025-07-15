@@ -1,6 +1,6 @@
 ---
 - name: Change content of a config file
-  hosts: servera.lab.example.com
+  hosts: localhost
   tasks:
     - name: Install httpd
       ansible.builtin.dnf:
