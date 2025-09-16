@@ -2,7 +2,7 @@
 - name: Change content of a config file
   hosts: localhost
   tasks:
-    - name: Install httpd
+    - name: Install httpd software
       ansible.builtin.dnf:
         name: httpd
         state: installed
