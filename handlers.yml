@@ -50,7 +50,8 @@
         seuser: system_u
   
   handlers:
-    - name: restart_httpd
+    - name: Restart httpd if needed
       ansible.builtin.service:
         name: httpd
         state: restarted
+      listen: restart_httpd
