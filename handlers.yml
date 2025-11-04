@@ -5,7 +5,7 @@
     - name: Install httpd software
       ansible.builtin.dnf:
         name: httpd
-        state: installed
+        state: latest
 
     - name: Start httpd
       ansible.builtin.service:
