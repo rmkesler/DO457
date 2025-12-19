@@ -1,0 +1,9 @@
+---
+- name: Use filters
+  hosts: iosxe1.lab.example.com
+  vars:
+    ipaddr: 172.25.250.9/255.255.255.0
+  tasks:
+    - name: Use filter with variable
+      ansible.builtin.debug:
+        msg: "{{ ipaddr | ansible.utils.ipaddr('address') }}"

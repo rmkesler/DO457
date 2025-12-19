@@ -1,0 +1,19 @@
+---
+- name: Configure SNMP on Juniper managed nodes
+  hosts: junos
+  gather_facts: false
+  tasks:
+    - name: Enable netconf service on port 830
+      vars:
+        ansible_connection: ansible.netcommon.network_cli
+      junipernetworks.junos.junos_netconf:
+        netconf_port: 830
+        state: present
+
+    - name: Configure SNMP settings
+      junipernetworks.junos.junos_snmp_server:
+        state: "{{ snmp_state }}"
+        config:
+          location: "{{ snmp_location }}"
+          contact: "{{ snmp_contact }}"
+          communities: "{{ snmp_communities }}"

@@ -1,0 +1,31 @@
+all:
+  children:
+    ios:
+      hosts:
+        iosxe1.lab.example.com:
+          ansible_become: true
+          ansible_become_method: enable
+          ansible_connection: ansible.netcommon.network_cli
+          ansible_network_os: cisco.ios.ios
+          ansible_ssh_private_key_file: ~/.ssh/lab_rsa
+          ansible_user: student
+        iosxe2.lab.example.com:
+          ansible_become: true
+          ansible_become_method: enable
+          ansible_connection: ansible.netcommon.network_cli
+          ansible_network_os: cisco.ios.ios
+          ansible_ssh_private_key_file: ~/.ssh/lab_rsa
+          ansible_user: student
+    junos:
+      hosts:
+        junos1.lab.example.com:
+          ansible_connection: ansible.netcommon.netconf
+          ansible_network_os: junipernetworks.junos.junos
+          ansible_ssh_private_key_file: ~/.ssh/lab_rsa
+          ansible_user: student
+        junos2.lab.example.com:
+          ansible_connection: ansible.netcommon.netconf
+          ansible_network_os: junipernetworks.junos.junos
+          ansible_ssh_private_key_file: ~/.ssh/lab_rsa
+          ansible_user: student
+    ungrouped: {}

@@ -1,0 +1,12 @@
+---
+- name: Configure SNMP on Cisco IOS XE managed nodes
+  hosts: ios
+  gather_facts: false
+  tasks:
+    - name: Configure SNMP settings
+      cisco.ios.ios_snmp_server:
+        state: "{{ snmp_state }}"
+        config:
+          location: "{{ snmp_location }}"
+          contact: "{{ snmp_contact }}"
+          communities: "{{ snmp_communities }}"

@@ -1,0 +1,16 @@
+---
+- name: Ping from IOS devices
+  hosts: ios
+  gather_facts: false
+  vars:
+    ipaddr: 172.25.250.9
+  tasks:
+    - name: Ping {{ ipaddr }} from IOS devices
+      cisco.ios.ios_ping:
+        dest: "{{ ipaddr }}"
+        count: 5
+      register: ping_results
+
+    - name: Print variable value
+      ansible.builtin.debug:
+        var: ping_results['rtt']['max']

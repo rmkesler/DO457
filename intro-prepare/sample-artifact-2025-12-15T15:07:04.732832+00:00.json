@@ -1,0 +1,345 @@
+{
+    "plays": [
+        {
+            "__play_name": "Sample playbook",
+            "name": "Sample playbook",
+            "pattern": "workstation",
+            "play": "Sample playbook",
+            "play_pattern": "workstation",
+            "play_uuid": "22ccb6a5-0f97-7881-647d-000000000002",
+            "playbook": "/home/student/intro-prepare/sample.yml",
+            "playbook_uuid": "19c261f3-6555-4c61-8ddb-7a6fcbf0f71a",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "workstation",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Check for /home/student/.config/Code/User/settings.json",
+                    "__task_action": "ansible.builtin.stat",
+                    "duration": 1.704768,
+                    "end": "2025-12-15T15:07:03.043640",
+                    "event_loop": null,
+                    "host": "workstation",
+                    "play": "Sample playbook",
+                    "play_pattern": "workstation",
+                    "play_uuid": "22ccb6a5-0f97-7881-647d-000000000002",
+                    "playbook": "/home/student/intro-prepare/sample.yml",
+                    "playbook_uuid": "19c261f3-6555-4c61-8ddb-7a6fcbf0f71a",
+                    "remote_addr": "workstation",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "ansible_facts": {
+                            "discovered_interpreter_python": "/usr/bin/python3"
+                        },
+                        "changed": false,
+                        "invocation": {
+                            "module_args": {
+                                "checksum_algorithm": "sha1",
+                                "follow": false,
+                                "get_attributes": true,
+                                "get_checksum": true,
+                                "get_md5": false,
+                                "get_mime": true,
+                                "path": "/home/student/.config/Code/User/settings.json"
+                            }
+                        },
+                        "stat": {
+                            "atime": 1765810055.158252,
+                            "attr_flags": "",
+                            "attributes": [],
+                            "block_size": 4096,
+                            "blocks": 8,
+                            "charset": "us-ascii",
+                            "checksum": "089050b916c985529b807cf668d5fbe160dfe09c",
+                            "ctime": 1765810055.0392518,
+                            "dev": 64516,
+                            "device_type": 0,
+                            "executable": false,
+                            "exists": true,
+                            "gid": 1000,
+                            "gr_name": "student",
+                            "inode": 67467456,
+                            "isblk": false,
+                            "ischr": false,
+                            "isdir": false,
+                            "isfifo": false,
+                            "isgid": false,
+                            "islnk": false,
+                            "isreg": true,
+                            "issock": false,
+                            "isuid": false,
+                            "mimetype": "application/json",
+                            "mode": "0600",
+                            "mtime": 1765810054.1362517,
+                            "nlink": 1,
+                            "path": "/home/student/.config/Code/User/settings.json",
+                            "pw_name": "student",
+                            "readable": true,
+                            "rgrp": false,
+                            "roth": false,
+                            "rusr": true,
+                            "size": 327,
+                            "uid": 1000,
+                            "version": "512142954",
+                            "wgrp": false,
+                            "woth": false,
+                            "writeable": true,
+                            "wusr": true,
+                            "xgrp": false,
+                            "xoth": false,
+                            "xusr": false
+                        }
+                    },
+                    "resolved_action": "ansible.builtin.stat",
+                    "start": "2025-12-15T15:07:01.338872",
+                    "task": "Check for /home/student/.config/Code/User/settings.json",
+                    "task_action": "ansible.builtin.stat",
+                    "task_args": "",
+                    "task_path": "/home/student/intro-prepare/sample.yml:10",
+                    "task_uuid": "22ccb6a5-0f97-7881-647d-000000000004",
+                    "uuid": "378900fc-7e6e-4d64-bb24-0e0f15a25251"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "workstation",
+                    "__number": 1,
+                    "__result": "Ok",
+                    "__task": "Slurp /home/student/.config/Code/User/settings.json",
+                    "__task_action": "ansible.builtin.slurp",
+                    "duration": 0.895595,
+                    "end": "2025-12-15T15:07:03.948550",
+                    "event_loop": null,
+                    "host": "workstation",
+                    "play": "Sample playbook",
+                    "play_pattern": "workstation",
+                    "play_uuid": "22ccb6a5-0f97-7881-647d-000000000002",
+                    "playbook": "/home/student/intro-prepare/sample.yml",
+                    "playbook_uuid": "19c261f3-6555-4c61-8ddb-7a6fcbf0f71a",
+                    "remote_addr": "workstation",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "changed": false,
+                        "content": "ewogICAgImFuc2libGUuZXhlY3V0aW9uRW52aXJvbm1lbnQuZW5hYmxlZCI6IHRydWUsCiAgICAiYW5zaWJsZS5leGVjdXRpb25FbnZpcm9ubWVudC5pbWFnZSI6ICJodWIubGFiLmV4YW1wbGUuY29tL2VlLXN1cHBvcnRlZC1yaGVsODpsYXRlc3QiLAogICAgImFuc2libGUucHl0aG9uLmludGVycHJldGVyUGF0aCI6ICIvYmluL3B5dGhvbiIsCiAgICAiZmlsZXMuYXNzb2NpYXRpb25zIjogewogICAgICAgICIqLnltbCI6ICJhbnNpYmxlIgogICAgfSwKICAgICJyZWRoYXQudGVsZW1ldHJ5LmVuYWJsZWQiOiBmYWxzZSwKICAgICJ1cGRhdGUubW9kZSI6ICJtYW51YWwiCn0K",
+                        "encoding": "base64",
+                        "invocation": {
+                            "module_args": {
+                                "path": "/home/student/.config/Code/User/settings.json",
+                                "src": "/home/student/.config/Code/User/settings.json"
+                            }
+                        },
+                        "source": "/home/student/.config/Code/User/settings.json"
+                    },
+                    "resolved_action": "ansible.builtin.slurp",
+                    "start": "2025-12-15T15:07:03.052955",
+                    "task": "Slurp /home/student/.config/Code/User/settings.json",
+                    "task_action": "ansible.builtin.slurp",
+                    "task_args": "",
+                    "task_path": "/home/student/intro-prepare/sample.yml:18",
+                    "task_uuid": "22ccb6a5-0f97-7881-647d-000000000006",
+                    "uuid": "86df044a-96f2-4742-ae57-a09cfa6fa25e"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "workstation",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Display /home/student/.config/Code/User/settings.json",
+                    "__task_action": "ansible.builtin.debug",
+                    "duration": 0.070507,
+                    "end": "2025-12-15T15:07:04.029751",
+                    "event_loop": null,
+                    "host": "workstation",
+                    "play": "Sample playbook",
+                    "play_pattern": "workstation",
+                    "play_uuid": "22ccb6a5-0f97-7881-647d-000000000002",
+                    "playbook": "/home/student/intro-prepare/sample.yml",
+                    "playbook_uuid": "19c261f3-6555-4c61-8ddb-7a6fcbf0f71a",
+                    "remote_addr": "workstation",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "_ansible_verbose_always": true,
+                        "changed": false,
+                        "slurp_settings['content'] | b64decode": {
+                            "ansible.executionEnvironment.enabled": true,
+                            "ansible.executionEnvironment.image": "hub.lab.example.com/ee-supported-rhel8:latest",
+                            "ansible.python.interpreterPath": "/bin/python",
+                            "files.associations": {
+                                "*.yml": "ansible"
+                            },
+                            "redhat.telemetry.enabled": false,
+                            "update.mode": "manual"
+                        }
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "start": "2025-12-15T15:07:03.959244",
+                    "task": "Display /home/student/.config/Code/User/settings.json",
+                    "task_action": "ansible.builtin.debug",
+                    "task_args": "",
+                    "task_path": "/home/student/intro-prepare/sample.yml:23",
+                    "task_uuid": "22ccb6a5-0f97-7881-647d-000000000007",
+                    "uuid": "dbcff870-ae39-4458-8305-89c44ef9f10f"
+                }
+            ],
+            "uuid": "22ccb6a5-0f97-7881-647d-000000000002"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/student/intro-prepare/inventory"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/student/intro-prepare/sample.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/student/intro-prepare"
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/student/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "hub.lab.example.com/ee-supported-rhel8:latest",
+                "pull": {
+                    "policy": "missing"
+                }
+            },
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/student/intro-prepare/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Settings file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Settings file",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Settings file",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/student/intro-prepare/ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "",
+        "PLAY [Sample playbook] *********************************************************",
+        "",
+        "TASK [Check for /home/student/.config/Code/User/settings.json] *****************",
+        "\u001b[0;32mok: [workstation]\u001b[0m",
+        "",
+        "TASK [Slurp /home/student/.config/Code/User/settings.json] *********************",
+        "\u001b[0;32mok: [workstation]\u001b[0m",
+        "",
+        "TASK [Display /home/student/.config/Code/User/settings.json] *******************",
+        "\u001b[0;32mok: [workstation] => {\u001b[0m",
+        "\u001b[0;32m    \"slurp_settings['content'] | b64decode\": {\u001b[0m",
+        "\u001b[0;32m        \"ansible.executionEnvironment.enabled\": true,\u001b[0m",
+        "\u001b[0;32m        \"ansible.executionEnvironment.image\": \"hub.lab.example.com/ee-supported-rhel8:latest\",\u001b[0m",
+        "\u001b[0;32m        \"ansible.python.interpreterPath\": \"/bin/python\",\u001b[0m",
+        "\u001b[0;32m        \"files.associations\": {\u001b[0m",
+        "\u001b[0;32m            \"*.yml\": \"ansible\"\u001b[0m",
+        "\u001b[0;32m        },\u001b[0m",
+        "\u001b[0;32m        \"redhat.telemetry.enabled\": false,\u001b[0m",
+        "\u001b[0;32m        \"update.mode\": \"manual\"\u001b[0m",
+        "\u001b[0;32m    }\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;32mworkstation\u001b[0m                : \u001b[0;32mok=3   \u001b[0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}
